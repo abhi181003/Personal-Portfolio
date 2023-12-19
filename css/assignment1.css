@@ -1,0 +1,1062 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300&family=Poppins:wght@300&family=Roboto&display=swap');
+
+/* Reset some default styles for cross-browser consistency */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and set font families for the entire page */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Style for the projects body */
+#projbody {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 13vh;
+}
+
+/* Fixed navigation bar at the top */
+#navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    padding: 40px 0 20px 0;
+}
+
+/* Styles for the navigation links */
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    font-size: 24px;
+}
+
+/* Styles for anchor links */
+a {
+    transition: all 300ms ease;
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+/* Hover effect for anchor links */
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 16px;
+    text-decoration-color: grey;
+}
+
+/* Logo style */
+.logo {
+    font-size: 32px;
+}
+
+/* Hidden hamburger menu */
+#hamburger {
+    display: none;
+}
+
+/* Menu icon and links */
+#menu {
+    position: relative;
+    display: inline-block;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Styles for the expanded menu links */
+.menu-links {
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Styles for the open menu icon */
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+    z-index: 3;
+}
+
+/* Styles for the open menu icon */
+.icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.icon span:first-child {
+    transform: none;
+}
+
+.icon span:nth-child(2) {
+    opacity: 1;
+}
+
+.icon span:first-child {
+    transform: none;
+}
+
+/* Profile section styles */
+#profile {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 160px;
+    box-sizing: border-box;
+    min-height: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding-top: 120px;
+    height: calc(100vh - 120px);
+}
+
+/* Styles for the profile picture */
+.pic {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+/* Text styles in the profile section */
+.text {
+    align-self: center;
+    text-align: center;
+}
+
+/* Additional text styles */
+.text_p {
+    font-weight: 400;
+}
+
+.text_p1 {
+    text-align: center;
+    font-size: 18px;
+}
+
+.text_p2 {
+    font-size: 22px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+/* Title style */
+.title {
+    font-size: 48px;
+    text-align: center;
+}
+
+/* Social media icons container */
+#socials-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    gap: 16px;
+}
+
+/* Social media icons style */
+.socials-icon {
+    cursor: pointer;
+    height: 54px;
+}
+
+/* Button container */
+.btn-box {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Generic button styles */
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    width: 144px;
+    height: 48px;
+    border-radius: 32px;
+}
+
+/* Button styles for the first and second buttons */
+.btn-1, .btn-2 {
+    border: rgb(53, 53, 53) 1px solid;
+}
+
+.btn-1:hover, .btn-2:hover {
+    cursor: pointer;
+}
+
+.btn-1:hover, .btn-2 {
+    background: rgb(69, 69, 69);
+    color: white;
+}
+
+.btn-2:hover {
+    background: #000;
+}
+
+.btn-1 {
+    background: none;
+}
+
+/* Contact section styles */
+.contact .container-flex-center .content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+section.contact {
+    padding-top: 104px;
+    height: calc(100vh - 104px);
+    margin: 0 160px;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+/* Contact form and information styles */
+.contact-left {
+    flex: 1;
+    margin-left: 150px;
+    margin-right: auto;
+}
+
+.contact-right {
+    flex: 1;
+}
+
+/* Header style for contact section */
+.contact-left h2 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+/* Styles for the contact list */
+.contact-list li {
+    margin-bottom: 40px;
+}
+
+/* Styles for the contact list item's header */
+.contact-list li h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+/* Styles for the contact list item's image icon */
+.contact-list li h3 img {
+    font-size: 24px;
+    margin-right: 12px;
+}
+
+/* Additional contact list item's style */
+.contact-list li span {
+    margin-left: 40px;
+    color: #000;
+}
+
+/* Style for the contact form */
+.contact-right p {
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-top: 40px;
+    color: #000;
+}
+
+/* Contact form input and textarea style */
+.contact-form input,
+.contact-form textarea {
+    border: none;
+    background: #bcb9c8;
+    font-size: 22px;
+    margin: 20px;
+    padding: 15px 40px 40px 20px;
+    border-radius: 5px;
+}
+
+/* Styles for the contact form textarea */
+.contact-form textarea {
+    width: 100%;
+    resize: none;
+}
+
+/* Placeholder text style */
+::placeholder {
+    color: #000;
+}
+
+/* Styles for the contact form's first row inputs */
+.contact-form .first-row input {
+    width: 100%;
+}
+
+/* Styles for the contact form's second row */
+.contact-form .second-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styles for the contact form's second row inputs */
+.contact-form .second-row input {
+    width: 50%;
+}
+
+/* Style for the contact form's submit button */
+.contact-form .btn {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+/* Style for the contact form's submit button when hovered */
+.btn-contact:hover {
+    background-color: #000;
+    color: white;
+}
+
+/* Projects section styles */
+section.projects {
+    padding-top: 120px;
+    height: calc(100vh - 120px);
+    margin: 0 120px;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+/* Projects section container style */
+#projects {
+    padding: 6.5rem 0;
+}
+
+/* Style for each project item in the projects section */
+#projects .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 15rem;
+    margin-top: 20px;
+}
+
+/* Alternate style for even project items */
+#projects .item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Style for the left part of a project item */
+#projects .item .left {
+    flex: 1;
+}
+
+/* Style for the right part of a project item */
+#projects .item .rgt {
+    flex: 1;
+    margin-left: -250px;
+    background-color: #efebfa;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #00000028;
+    z-index: 1;
+}
+
+/* Project title style */
+.project-title {
+    margin-bottom: 10px;
+}
+
+/* Additional style for even project items */
+#projects .item:nth-child(even) .rgt {
+    margin-left: 0;
+}
+
+/* Additional style for even project items */
+#projects .item:nth-child(even) .left {
+    margin-left: -250px;
+}
+
+/* Style for the left part of a project item's image */
+#projects .item .left.img {
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px #4705fc33;
+    position: relative;
+}
+
+/* Style for the left part of a project item's image */
+#projects .item .left .img {
+    height: 550px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px #4705fc33;
+}
+
+/* Style for the project item's image */
+#projects .item .left .img img {
+    object-fit: cover;
+    transition: 300ms ease transform;
+}
+
+/* Hover effect for project item's image */
+#projects .item:hover .left .img img {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+/* Style for inactive project items */
+#projects .container .all-items .item.inactive {
+    display: none;
+}
+
+/* Styles for the project navigation buttons */
+.container #next, .container #prev {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    color: black;
+    background: white;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 40px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+/* Styles for the project previous button when hovered */
+.container #next:hover, .container #prev:hover{ 
+    background:black;
+    color: white;
+    border-radius: 40px; 
+}
+
+/* Style for the project previous button */
+.container #prev {
+    left: 20px;
+}
+
+/* Style for the project next button */
+.container #next {
+    right: 20px;
+}
+
+/* Main section styles */
+main.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+/* Title style for main section */
+.title h2 {
+    font-size: 36px;
+    padding: 0 0 20px 30px;
+}
+
+/* Column style for main section */
+.col {
+    margin: 80px 80px 80px 100px;
+}
+
+/* Contents style for main section */
+.col .contents {
+    padding: 0 30px;
+    border-left: 2px solid black;
+}
+
+/* Box style for main section */
+.col .contents .box {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+}
+
+/* Hover effect for boxes in the main section */
+.col .contents .box:hover {
+    box-shadow: 0 3px 12px 0 grey;
+    border: 1px solid transparent;
+}
+
+/* Styles for the circle icon before the text in boxes */
+.col .contents .box::before {
+    content: ' ';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    left: -41px;
+    top: 0;
+    background-color: grey;
+    border: 2px solid white;
+}
+
+.abt_me {
+    margin: 0;
+    max-width: 85%;
+    padding-top: 120px; /* Adjust this value as needed to align with your navigation bar's height */
+    height: calc(110vh - 120px); /* Make sure the content fills the remaining height */
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+/* Styles for the 'about_container' section */
+.about_container {
+    width: 100%;
+    padding: 50px 8%;
+}
+
+/* Styles for the contents of the 'about_container' section */
+.about_container .about_contents {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-gap: 70px;
+}
+
+/* Styles for the 'imageSection' within the 'about_contents' section */
+.about_contents .imageSection {
+    position: relative;
+    min-width: 250px;
+    height: 380px;
+}
+
+/* Styles for images within the 'imageSection' */
+.imageSection img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+/* Adding an outline to the 'imageSection' */
+.about_contents .imageSection::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    outline: 3px solid black;
+    top: 15px;
+    left: 15px;
+}
+
+/* Styles for 'h1' elements within the 'infoSection' */
+.infoSection h1 {
+    color: #000;
+    font-size: 42px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+/* Adding a line before 'h1' */
+.infoSection h1::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 110%;
+    left: 0;
+    background-color: gray;
+}
+
+/* Adding a line after 'h1' */
+.infoSection h1::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    top: calc(110% - 1px);
+    left: 0px;
+    background-color: black;
+}
+
+/* Styles for 'h2' elements within the 'infoSection' */
+.infoSection h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(128, 128, 128);
+    padding: 14px 0px 15px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+/* Styles for 'p' elements within the 'infoSection' */
+.infoSection p {
+    margin-bottom: 40px;
+}
+
+/* Styles for the 'personalInfo' section */
+.personalInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px 40px;
+    margin-top: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid;
+}
+
+/* Styles for individual 'div' elements within 'personalInfo' */
+.personalInfo div {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+}
+
+/* Adjust the 'span' within 'div' elements */
+.personalInfo div span {
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+/* Styles for 'btn-box-2' */
+.btn-box-2 {
+    margin-top: 40px;
+}
+
+/* Styles for the 'skills_section' */
+.skills_section {
+    margin: 0 120px 50px 120px;
+}
+
+/* Styles for the 'skills_container' */
+.skills_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 120px;
+}
+
+/* Styles for the 'skills_header' */
+.skills_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Styles for 'skills_title' */
+.skills_title {
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+/* Styles for 'skills_titles' */
+.skills_titles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+/* Styles for 'skills_name' */
+.skills_name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Styles for skill progress bars */
+.skills_bar, .skills_percent {
+    height: 5px;
+    border-radius: .25rem;
+}
+
+/* Styles for the background of skill progress bars */
+.skills_bar {
+    background-color: rgb(144, 144, 144);
+}
+
+/* Styles for filled skill progress bars */
+.skills_percent {
+    display: block;
+    background-color: #000;
+}
+
+/* Individual skill progress bar styles */
+.skills_html {
+    width: 90%;
+}
+
+.skills_css {
+    width: 80%;
+}
+
+.skills_js {
+    width: 65%;
+}
+
+.skills_java {
+    width: 80%;
+}
+
+.skills_sql {
+    width: 70%;
+}
+
+.skills_php {
+    width: 60%;
+}
+
+.skills_hw {
+    width: 90%;
+}
+
+.skills_tw {
+    width: 95%;
+}
+
+.skills_creativity {
+    width: 92%;
+}
+
+/* Styles for the footer */
+footer {
+    height: 3vh;
+    text-align: center;
+    margin: auto 16px 10px 16px; /* Adjust margin as needed */
+}
+
+
+/* Media Query for screens with a maximum width of 1150px */
+@media only screen and (max-width: 1150px) {
+    /* Adjust the navigation bar for smaller screens */
+    #navigation {
+        display: none;
+    }
+
+    /* Display the hamburger menu button */
+    #hamburger {
+        display: flex;
+    }
+
+    /* Adjust the profile section for smaller screens */
+    #profile {
+        display: flex;
+        flex-direction: column; /* Stack elements in a column layout */
+        align-items: center; /* Center-align the content horizontally */
+    }
+
+    /* Adjust the picture's height and position */
+    .pic {
+        height: 80%; /* Allow the picture to adjust its height accordingly */
+        padding: 350px 0px 0px 80px;
+    }
+
+    /* Center-align the text in the profile section */
+    .text {
+        text-align: center;
+    }
+
+    /* Adjust the margins, padding, and font sizes for text elements */
+    .text_p1, .title {
+        font-size: 28px; /* Adjust the font size for consistency */
+        padding-left: 0px;
+    }
+
+    /* Add space between text elements */
+    .text_p2 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    /* Position the footer */
+    #indbody footer {
+        position: relative;
+        bottom: -460px;
+        width: 95%;
+        padding: 15px 0;
+    }
+
+    /* Adjust the logo size */
+    .logo {
+        font-size: 28px;
+    }
+
+    /* Change skills container layout */
+    .skills_container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Adjust the width of skill progress bars */
+    .skills_bar {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    /* Adjust the width of the third skills content */
+    .skills_content:nth-child(3) {
+        width: max-content;
+    }
+
+    /* Adjust the layout for small screens */
+    .row {
+        margin: 0;
+        max-width: 100%;
+        padding-top: 600px; /* Adjust this value as needed to align with your navigation bar's height */
+        height: calc(110vh - 650px); /* Make sure the content fills the remaining height */
+        box-sizing: border-box;
+        min-height: fit-content;
+    }
+
+    /* Further adjustments for the 'abt_me' section */
+    .abt_me {
+        margin: 0;
+        max-width: 85%;
+        padding-top: 0px; /* Adjust this value as needed to align with your navigation bar's height */
+        height: calc(110vh - 0px); /* Make sure the content fills the remaining height */
+        box-sizing: border-box;
+        min-height: fit-content;
+    }
+
+    /* Adjust layout for small screens */
+    main.row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Margin adjustment for the second column on small screens */
+    .row .col:nth-child(2) {
+        margin-top: 30px;
+    }
+
+    /* Further adjustments for the Skills section */
+    .skills_section {
+        margin: 20px 40px;
+        max-width: 85%;
+        padding-top: 3650px; /* Adjust this value as needed to align with your navigation bar's height */
+    }
+
+    /* Footer adjustments */
+    footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    /* Additional layout adjustments for small screens */
+    main.row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Margin adjustment for the second column on small screens */
+    .row .col:nth-child(2) {
+        margin-top: 30px;
+    }
+
+    /* Adjustments for the Projects section */
+    section.projects {
+        padding-top: 60px;
+        height: auto;
+        margin: 0;
+    }
+
+    /* Adjust project item layout for small screens */
+    #projects .item {
+        flex-direction: column;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    /* Further adjustments for project items on even rows */
+    #projects .item:nth-child(even) {
+        flex-direction: column;
+    }
+
+    /* Adjust the layout of left and right parts of project items */
+    #projects .item:nth-child(even) .left,
+    #projects .item .left,
+    #projects .item .rgt {
+        flex: 1;
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    /* Adjust the font size for project titles */
+    .project-title {
+        margin-bottom: 5px;
+        font-size: 24px;
+    }
+
+    /* Adjust image sizes within project items */
+    #projects .item .left .img,
+    #projects .item .left .img img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Adjust styles for next and previous buttons */
+    .container #next,
+    .container #prev {
+        top: 34%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background: none;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        font-size: 30px;
+        color: black;
+        text-align: center;
+        cursor: pointer;
+        font-weight: bolder;
+    }
+
+    /* Adjust the font size for section titles */
+    .title h2 {
+        font-size: 24px;
+        padding: 0 0 10px 20px;
+    }
+
+    /* Margin adjustment for columns */
+    .col {
+        margin: 30px 30px 30px 30px;
+    }
+
+    /* Adjust padding and margin for content boxes */
+    .col .contents .box {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Change the layout for 'about_contents' */
+    .about_container .about_contents {
+        grid-template-columns: 1fr;
+    }
+
+    /* Adjust the outline around 'imageSection' */
+    .imageSection::after {
+        top: 5px;
+        left: 5px;
+    }
+
+    /* Change the layout for personal information 'div' elements */
+    .personalInfo div {
+        grid-template-columns: 1fr;
+    }
+
+    /* Margin adjustment for a button box */
+    .btn-box-2 {
+        margin-top: 20px;
+    }
+
+    /* Adjust the layout for the 'contact' section */
+    #contact {
+        padding: 0;
+        margin: 0;
+        align-items: center;
+    }
+
+    /* Adjust the title layout within the 'contact' section */
+    #contact .title {
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    /* Margin adjustments for elements within the 'contact' section */
+    .contact-left h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .contact-right p {
+        margin-bottom: 20px;
+    }
+
+    /* Change the layout of content within the 'contact' section */
+    .contact .content {
+        flex-direction: column;
+        font-size: 0.9rem;
+    }
+
+    /* Margin adjustment for the 'contact-left' section */
+    .contact-left {
+        margin-left: 35px;
+    }
+
+    /* Margin adjustment for contact list items */
+    .contact-list li {
+        margin-bottom: 30px;
+    }
+
+    /* Adjust the width of the contact form */
+    .contact-form {
+        width: 80%;
+    }
+
+    /* Change the layout for the second row of contact form inputs */
+    .contact-form .second-row {
+        flex-direction: column;
+    }
+
+    /* Adjust the width of contact form input fields */
+    .contact-form .second-row input {
+        width: 100%;
+    }
+}

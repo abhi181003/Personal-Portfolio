@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Author's Name -->
+    <meta name="author" content="Abhishek Aggarwal">
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="css/assignment1.css">
+    <title>Abhishek Aggarwal - Personal Portfolio</title>
+</head>
+<body id="indbody">
+    <header>
+        <nav id="navigation">
+            <!-- Website Logo -->
+            <div class="logo">Abhishek Aggarwal</div>
+            <div>
+                <ul class="nav-links">
+                    <!-- Navigation Links -->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <nav id="hamburger">
+        <div class="logo">Abhishek Aggarwal</div>
+        <div class="menu">
+            <div class="icon" onclick="toggleMenu()">
+                <!-- Hamburger Menu Icon -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <!-- Hamburger Menu Links -->
+                <ul>
+                    <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="resume.html" onclick="toggleMenu()">Resume</a></li>
+                    <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="pic">
+            <!-- Profile Picture -->
+            <img src="picture/profile-pic.jpg" alt="Abhishek Aggarwal" class="pic1">
+        </div>
+        <div class="text">
+            <p class="text_p1">Hello, I'm</p>
+            <!-- Introduction Text -->
+            <h3 class="title">Abhishek Aggarwal</h3><br>
+            <p class="text_p2">I'm an aspiring full-stack developer currently in my second semester at Algonquin College, working towards a degree that will equip me with the skills to create innovative web solutions. Beyond coding, I enjoy exploring diverse hobbies and activities that fuel my curiosity and creativity.</p>
+            <div class="btn-box">
+                <button class="btn btn-1" onclick="window.open('picture/resume.jpg')">Download CV</button>
+                <button class="btn btn-2" onclick="window.open('https://www.algonquincollege.com')">Algonquin College</button>
+            </div>
+            <div id="socials-box">
+                <!-- Social Media Icons -->
+                <img src="picture/linkedin.png" alt="My LinkedIn profile" class="socials-icon" onclick="window.open('https://www.linkedin.com/in/abhishek-abhishek-295608253')">
+                <img src="picture/github.png" alt="My GitHub profile" class="socials-icon" onclick="window.open('https://github.com/abhi181003')">
+            </div>
+        </div>
+    </section>
+    <script src="Javascript/assignment1.js"></script>
+    <!-- Footer Section -->
+    <footer>
+        <p>Copyright &#169; 2023 Abhishek Aggarwal. All rights reserved</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Document metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Note: 'author' is not a valid meta tag attribute, and should be removed -->
+    <meta name="author" content="Abhishek Agagrwal">
+    <link rel="stylesheet" href="css/assignment1.css"> <!-- Link to your CSS file -->
+    <title>Abhishek Aggarwal - Contact Information</title>
+</head>
+<body id="contbody">
+    <!-- Navigation bar -->
+    <nav id="navigation">
+        <div class="logo">Abhishek Aggarwal</div>
+        <div>
+            <!-- Navigation links to other pages -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>     
+    </nav>
+
+    <!-- Hamburger menu for mobile navigation -->
+    <nav id="hamburger">
+        <div class="logo">Abhishek Aggarwal</div>
+        <div class="menu"></div>
+        <div class="icon" onclick="toggleMenu()">
+            <!-- Hamburger menu icon with three lines -->
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-links">
+            <ul>
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="resume.html" onclick="toggleMenu()">Resume</a></li>
+                <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="contact section" id="contact">
+        <!-- Contact section container -->
+        <div class="container-flex-center">
+            <h1 class="title">Contact Me</h1>
+            <div class="content">
+                <div class="contact-left">
+                    <h2 class="contact-title">Talk to me</h2>
+                    <ul class="contact-list">
+                        <!-- Contact information items -->
+                        <li>
+                            <h3 class="item-title"><img src="picture/phone-fill.png" alt="Phone-Icon">Phone</h3>
+                            <span>+1 343-987-1596</span>
+                        </li>
+                        <li>
+                            <h3 class="item-title"><img src="picture/mail-fill.png" alt="Mail-Icon">Email Address</h3>
+                            <span><a href="mailto:a.aggarwal1018@gmail.com">a.aggarwal1018@gmail.com</a></span>
+                        </li>
+                        <li>
+                            <h3 class="item-title"><img src="picture/map-2-fill.png" alt="Map-Icon">Address</h3>
+                            <span>1605 Street Name, ON, K2C 0B6</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contact-right">
+                    <!-- Contact form -->
+                    <p>Message Me</p>
+                    <form action="post" class="contact-form">
+                        <div class="first-row">
+                            <input type="text" placeholder="Name">
+                        </div>
+                        <div class="second-row">
+                            <input type="email" placeholder="Email">
+                            <input type="text" placeholder="Subject">
+                        </div>
+                        <div class="third-row">
+                            <textarea name="message" id="message" rows="7" placeholder="Message"></textarea>
+                        </div>
+                        <button class="btn btn-contact" type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript script -->
+        <script src="Javascript/assignment1.js"></script>
+
+        <footer>
+            <!-- Copyright information in the footer -->
+            <p>Copyright &#169; 2023 Abhishek Aggarwal. All rights reserved</p>
+        </footer>
+    </section>
+</body>
+</html>
